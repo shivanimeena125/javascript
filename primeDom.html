@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #div{
+        border: 2px solid black;
+background-color: aliceblue;
+width: 300px;
+height: 300px;
+margin: auto;
+text-align: center;
+padding: 20px;
+
+    }
+    #pera{
+        border: 2px solid black;
+        width: 100px;
+        height: 30px;
+        margin:  auto;
+        
+    }
+    </style>
+</head>
+<body>
+    <div id="div">
+        Number:
+        <input id="inp" type="number" placeholder="Enter a number"><br><br>
+        <button type="submit" onclick="prime()"> Result</button><br><br>
+        <p id="pera"></p>
+    </div>
+    <script>
+        function prime(){
+            
+            let num=document.getElementById("inp").value;
+            let count=0;
+        for(let i=2;i<=num;i++){
+            if(num%i==0){
+                count++;
+            }
+        }
+        if(count==1){
+            
+            let a=document.getElementById("pera");
+            a.innerHTML+=("number is prime");
+        }
+        else{
+             let b=document.getElementById("pera");
+            b.innerHTML+=("number is not  prime");
+        } 
+        }
+    </script>
+</body>
+</html>

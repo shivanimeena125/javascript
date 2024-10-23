@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div{
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            text-align: center;
+            border: 2px solid black;
+            background-color: aqua; 
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+        year:
+        <input id="inp" type="number" placeholder="Enter a year"><br><br>
+        Result:
+        <input id="res" type="text" ><br><br>
+        <button type="submit" onclick="leapYear()">submit</button>
+    </div>
+    <script>
+        function leapYear(){
+        let year=document.getElementById("inp").value;
+        if(year%4==0 &&year%100!=0){
+            
+             let a=document.getElementById("res");
+            a.setAttribute("value"," is a leap year")
+        }
+        else if(year%400==0){
+            
+            let a=document.getElementById("res");
+            a.setAttribute("value"," is a century year")
+        }
+        else{
+            
+            let a=document.getElementById("res");
+            a.setAttribute("value"," is  not a leap year")
+        }
+    }
+    
+    </script>
+</body>
+</html>

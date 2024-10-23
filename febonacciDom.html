@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #div{
+        border: 2px solid black;
+background-color: aliceblue;
+width: 300px;
+height: 300px;
+margin: auto;
+text-align: center;
+
+    }
+    #pera{
+        border: 2px solid black;
+        width: 100px;
+        height: 30px;
+        margin:  auto;
+    }
+</style>
+</head>
+<body>
+    <div id="div">
+        number:
+        <input id="inp" type="number" placeholder="Enter a number"><br><br>
+        <button type="submit" onclick="fibonacci()"> Result</button><br><br>
+        <p id="pera"></p>
+    </div>
+    <script>
+        function fibonacci(){
+            let num=document.getElementById("inp").value;
+            let n1=0,n2=1,nextturn
+            for(let i=1;i<=num;i++){
+                // console.log(n1);
+                let a=document.getElementById("pera");
+                a.innerHTML+=n1
+                nextturn=n1+n2
+                n1=n2
+                n2=nextturn
+            }
+        }
+    </script>
+</body>
+</html>
